@@ -1,12 +1,5 @@
 #! /bin/sh
 
-# Check if this script runs as root
-
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
-fi
-
 # Get the keys for the Debian sid repository
 
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 04EE7237B7D453EC
@@ -21,7 +14,7 @@ cp etc/wpa_supplicant/wpa_supplicant.conf·/etc/wpa_supplicant/
 # Update your packagelist
 
 apt clean && apt update
-apt install -t sid wpasupplicant
+apt install -y -t sid wpasupplicant
 
 # Let's edit the wpa_supplicant file
 
