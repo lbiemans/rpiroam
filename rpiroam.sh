@@ -16,7 +16,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 04EE7237B7D453EC
 cp etc/apt/preferences /etc/apt/
 cp etc/apt/sources.list.d/sid.list /etc/apt/sources.list.d/
 cp -a /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf.bak
-cp etc/wpa_supplicant/wpa_supplicant.conf·/etc/wpa_supplicant/
+cp etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/
 
 # Update your packagelist
 
