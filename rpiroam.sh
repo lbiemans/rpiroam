@@ -1,5 +1,12 @@
 #! /bin/sh
 
+# Check if we are root
+
+if [ $(id -u) -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
 # Get the keys for the Debian sid repository
 
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 04EE7237B7D453EC
